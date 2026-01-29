@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Just For You</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<audio id="bgMusic" loop>
+  <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- S1 -->
+<div class="screen active" id="s1">
+  <h1>I have something special to tell you…</h1>
+  <p>Just for you 💖</p>
+  <button onclick="next(2)">Tap to Begin</button>
+</div>
+
+<!-- S2 -->
+<div class="screen" id="s2">
+  <h1>Do you like surprises?</h1>
+  <div class="btns">
+    <button class="yes" onclick="next(3)">Yes 💕</button>
+    <button class="no" onclick="moveNo(this)">No 😌</button>
+  </div>
+</div>
+
+<!-- S3 -->
+<div class="screen" id="s3">
+  <h2>Something special is coming…</h2>
+  <button onclick="next(4)">Continue</button>
+</div>
+
+<!-- S4 MAIN QUESTION -->
+<div class="screen" id="s4">
+  <h1>Do you love me?</h1>
+  <div class="btns">
+    <button class="yes" onclick="goFinal()">Yes 💖</button>
+    <button class="no" onclick="goPlease()">No 😢</button>
+  </div>
+</div>
+
+<!-- S5 PLEASE -->
+<div class="screen" id="s5">
+  <h1>Please say yes!</h1>
+  <p>I really hope you do…</p>
+  <button onclick="goFinal()">Okay 🥺</button>
+</div>
+
+<!-- S6 CONFESSION -->
+<div class="screen" id="s6">
+  <h1>This is what I wanted to say for so long…</h1>
+  <button onclick="next(7)">Continue</button>
+</div>
+
+<!-- S7 PRAISE + IMAGES -->
+<div class="screen" id="s7">
+  <h1 id="nameSweet"></h1>
+  <p class="praise">
+    Your smile makes my worst days better.  
+    Your presence makes everything feel right.  
+    You are beautiful, inside and out.
+  </p>
+
+  <div class="gallery">
+    <a href="assets/her1.jpg" target="_blank"><img src="assets/her1.jpg"></a>
+    <a href="assets/her2.jpg" target="_blank"><img src="assets/her2.jpg"></a>
+    <a href="assets/her3.jpg" target="_blank"><img src="assets/her3.jpg"></a>
+  </div>
+
+  <button onclick="next(8)">Read My Heart 💌</button>
+</div>
+
+<!-- S8 LETTER -->
+<div class="screen" id="s8">
+  <h1 id="nameRespect"></h1>
+  <p class="letter">
+    Every challenge feels easier because I imagine you by my side.  
+    You make me want to be better.  
+    I want that future with you.
+  </p>
+  <button onclick="next(9)">Continue ❤️</button>
+</div>
+
+<!-- S9 FINAL -->
+<div class="screen" id="s9">
+  <h1>So… will you be mine forever?</h1>
+  <button class="yes">Yes, forever 💍</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
